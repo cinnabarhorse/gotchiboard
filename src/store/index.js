@@ -111,6 +111,18 @@ export default new Vuex.Store({
         totalKekModified += address.totalKekModified
       })
 
+      const leaderboard = getters.competitionAlchemica(season, round)
+
+      const array = [Object.keys(leaderboard[0])].concat(leaderboard)
+
+      const csv = array
+        .map((it) => {
+          return Object.values(it).toString()
+        })
+        .join('\n')
+
+      console.log('CSV Printout:', csv)
+
       return {
         numOfAddresses,
         tilesMinted,
