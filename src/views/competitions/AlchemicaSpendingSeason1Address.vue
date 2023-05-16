@@ -103,7 +103,7 @@ export default {
     return {
       loading: true,
       season: 1,
-      round: 1,
+      round: Number(this.$route.query.round) || 1,
       showModified: true,
       data: null,
       shownPlaces: 50
@@ -119,6 +119,7 @@ export default {
     spendingStats () {
       let tilesMinted = 0
       let installationsMinted = 0
+      let itemsMinted = 0
       let totalFud = 0
       let totalFomo = 0
       let totalAlpha = 0
@@ -133,6 +134,7 @@ export default {
       this.data.forEach(item => {
         if (item.type === 'tile') tilesMinted += item.quantity
         if (item.type === 'installation') installationsMinted += item.quantity
+        if (item.type === 'item') itemsMinted += item.quantity
         totalFud += item.costFud
         totalFomo += item.costFomo
         totalAlpha += item.costAlpha
@@ -148,6 +150,7 @@ export default {
       return {
         tilesMinted,
         installationsMinted,
+        itemsMinted,
         totalFud,
         totalFomo,
         totalAlpha,

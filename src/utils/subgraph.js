@@ -90,7 +90,8 @@ const getItemSpending = async (timeFrom, timeTo, owner) => {
     results = response.data.purchases
   }
 
-  return results
+  // Convert timestamp to seconds
+  return results.map((val) => ({ ...val, timestamp: Math.floor(val.timestamp / 1000) }))
 }
 
 const getENS = async (accounts) => {
