@@ -306,6 +306,7 @@ export default new Vuex.Store({
         timeFrom: context.state.competitionData.alchemica[options.season][options.round - 1].timeFrom,
         timePeriod: context.state.competitionData.alchemica[options.season][options.round - 1].timePeriod,
         dayModifiers: context.state.competitionData.alchemica[options.season][options.round - 1].dayModifiers,
+        tokenModifiers: context.state.competitionData.alchemica[options.season][options.round - 1].tokenModifiers,
         owner: options.owner
       })
     }
