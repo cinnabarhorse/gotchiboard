@@ -12,6 +12,8 @@ import AlchemicaSpendingSeason1 from '../views/competitions/AlchemicaSpendingSea
 import AlchemicaSpendingSeason1Address from '../views/competitions/AlchemicaSpendingSeason1Address'
 import AlchemicaSpendingSeason2 from '../views/competitions/AlchemicaSpendingSeason2'
 import AlchemicaSpendingSeason2Address from '../views/competitions/AlchemicaSpendingSeason2Address'
+import AlchemicaSpendingSeason3 from '../views/competitions/AlchemicaSpendingSeason3'
+import AlchemicaSpendingSeason3Address from '../views/competitions/AlchemicaSpendingSeason3Address'
 
 Vue.use(VueRouter)
 
@@ -77,6 +79,16 @@ const routes = [
     path: '/competitions/alch-spending-season-2/:address',
     name: 'AlchemicaSpendingSeason2Address',
     component: AlchemicaSpendingSeason2Address
+  },
+  {
+    path: '/competitions/alch-spending-season-3',
+    name: 'AlchemicaSpendingSeason3',
+    component: AlchemicaSpendingSeason3
+  },
+  {
+    path: '/competitions/alch-spending-season-3/:address',
+    name: 'AlchemicaSpendingSeason3Address',
+    component: AlchemicaSpendingSeason3Address
   },
   {
     path: '/about',
